@@ -14,6 +14,7 @@ echo "Datei $FILENAME"
 yt-dlp -o $OUTPUT_STRING -f "$QUALITY_STRING" --recode mp4 --no-playlist $1
 if [ -f "${FILENAME}.mp4" ]
 then
+  touch "${FILENAME}.mp4"
   open "${FILENAME}.mp4"
 fi
 
