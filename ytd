@@ -1,6 +1,7 @@
 #!/bin/sh
 # sk,26,10,22 funktioniert
 # sk,26,10,22 TODO: Qualitiät herabsetzen, anderer Dateiname
+# Kosmetik
 VIDEO_QUALITIY=1080
 VIDEO_QUALITIY=720
 OUTPUT_STRING='"%(title)s.%(ext)s"'
