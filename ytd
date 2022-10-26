@@ -1,6 +1,6 @@
 #!/bin/sh
 OUTPUT_STRING='"%(title)s.%(ext)s"'
-# FILENAME=$( yt-dlp --get-filename -o $OUTPUT_STRING $1 )
-# echo $FILENAME
+FILENAME=$( yt-dlp --get-filename -o $OUTPUT_STRING $1 )
+echo "Datei $FILENAME"
 yt-dlp -o $OUTPUT_STRING -S res,ext:mp4:m4a --recode mp4 --no-playlist $1
 
