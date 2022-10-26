@@ -1,3 +1,5 @@
 #!/bin/sh
-yt-dlp -o "%(title)s.%(ext)s" -S res,ext:mp4:m4a --recode mp4 $1
+FILENAME=$( yt-dlp --get-filename -o "%(title)s.%(id)s.%(ext)s" $1 )
+echo $FILENAME
+# yt-dlp -o "%(title)s.%(ext)s" -S res,ext:mp4:m4a --recode mp4 $1
 
