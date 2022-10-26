@@ -2,6 +2,7 @@
 # sk,26,10,22 funktioniert
 # sk,26,10,22 TODO: Qualitiät herabsetzen, anderer Dateiname
 VIDEO_QUALITIY=1080
+VIDEO_QUALITIY=720
 OUTPUT_STRING='"%(title)s.%(ext)s"'
 QUALITY_STRING1='"bestvideo[height<=' 
 QUALITY_STRING2='][ext=mp4]+bestaudio[ext=m4a]\/best[ext=mp4]\/best"'
