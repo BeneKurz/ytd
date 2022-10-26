@@ -5,7 +5,7 @@ OUTPUT_STRING='"%(title)s.%(ext)s"'
 FILENAME=$( yt-dlp --get-filename -o "%(title)s" $1 )
 echo "Datei $FILENAME"
 # yt-dlp -o $OUTPUT_STRING -S res,ext:mp4:m4a --recode mp4 --no-playlist $1
-yt-dlp -o $OUTPUT_STRING --recode mp4 --no-playlist $1
+yt-dlp -o $OUTPUT_STRING -f "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --recode mp4 --no-playlist $1
 if [ -f "${FILENAME}.mp4" ]
 then
   open "${FILENAME}.mp4"
