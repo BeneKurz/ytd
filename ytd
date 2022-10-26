@@ -1,4 +1,6 @@
 #!/bin/sh
+# sk,26,10,22 funktioniert
+# sk,26,10,22 TODO: Qualitiät herabsetzen, anderer Dateiname
 OUTPUT_STRING='"%(title)s.%(ext)s"'
 FILENAME=$( yt-dlp --get-filename -o "%(title)s" $1 )
 echo "Datei $FILENAME"
