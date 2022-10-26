@@ -1,0 +1,3 @@
+#!/bin/sh
+yt-dlp -o "%(title)s.%(ext)s" -S res,ext:mp4:m4a --recode mp4 $1
+
