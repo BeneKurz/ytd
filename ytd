@@ -16,14 +16,20 @@ QUALITY_STRING1='"bestvideo[height<='
 QUALITY_STRING2='][ext=mp4]+bestaudio[ext=m4a]\/best[ext=mp4]\/best"'
 QUALITY_STRING="${QUALITY_STRING1}${VIDEO_QUALITIY}${QUALITY_STRING2}"
 # echo "Q: $QUALITY_STRING"
-FILENAME=$( yt-dlp --get-filename -o "%(title)s" $1 )
 # echo "Datei $FILENAME"
 # yt-dlp -o $OUTPUT_STRING -S res,ext:mp4:m4a --recode mp4 --no-playlist $1
-yt-dlp --no-progress -o $OUTPUT_STRING -f "$QUALITY_STRING" --recode mp4 --no-playlist $1
-if [ -f "${FILENAME}.mp4" ]
+if [ $# -eq 0 ]
 then
-  touch "${FILENAME}.mp4"
-  open "${FILENAME}.mp4"
-  #/bin/rm -f "${FILENAME}.mp4"
+	echo "usage: $0 URL"
+	exit 1
+else
+	FILENAME=$( yt-dlp --get-filename -o "%(title)s" $1 )
+	yt-dlp --no-progress -o $OUTPUT_STRING -f "$QUALITY_STRING" --recode mp4 --no-playlist $1
+	if [ -f "${FILENAME}.mp4" ]
+	then
+  		touch "${FILENAME}.mp4"
+  		open "${FILENAME}.mp4"
+  	#/bin/rm -f "${FILENAME}.mp4"
+	fi
 fi
 
