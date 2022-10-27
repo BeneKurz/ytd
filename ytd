@@ -7,6 +7,7 @@
 # sk,27,10,22 Leerzeile raus
 # Gruss von iPadOs
 # Gruss von Windows
+# Nochn Gruss von iPadOs
 VIDEO_QUALITIY=1080
 VIDEO_QUALITIY=720
 OUTPUT_STRING='"%(title)s.%(ext)s"'
