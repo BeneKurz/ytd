@@ -24,7 +24,7 @@ then
 	exit 1
 else
 	FILENAME=$( yt-dlp --get-filename -o "%(title)s" $1 )
-	yt-dlp --no-progress -o $OUTPUT_STRING -f "$QUALITY_STRING" --recode mp4 --no-playlist $1
+	yt-dlp -o $OUTPUT_STRING -f "$QUALITY_STRING" --recode mp4 --no-playlist $1
 	if [ -f "${FILENAME}.mp4" ]
 	then
   		touch "${FILENAME}.mp4"
