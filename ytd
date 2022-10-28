@@ -5,10 +5,7 @@
 # Nochmals Kosmetik
 # sk,27,10,22 Löschen raus
 # sk,27,10,22 Leerzeile raus
-# Gruss von iPadOs
-# Gruss von Windows
-# Nochn Gruss von iPadOs
-# Nochn Gruss von Windows
+# sk,28,10,22 Gruss von Windows
 VIDEO_QUALITIY=1080
 VIDEO_QUALITIY=720
 OUTPUT_STRING='"%(title)s.%(ext)s"'
@@ -28,8 +25,8 @@ else
 	if [ -f "${FILENAME}.mp4" ]
 	then
   		touch "${FILENAME}.mp4"
+      echo "${FILENAME}.mp4"
   		open "${FILENAME}.mp4"
-  	#/bin/rm -f "${FILENAME}.mp4"
 	fi
 fi
 
